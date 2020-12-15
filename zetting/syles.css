@@ -1,0 +1,123 @@
+body,
+html {
+  height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("fire-dancing-1174205.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: ghostwhite;
+}
+h1 {
+  color: rgb(253, 0, 0);
+}
+
+/*icons*/
+.fire {
+  background-color: transparent;
+  border: none;
+}
+
+.fa-fire-alt {
+  color: rgb(253, 0, 0);
+}
+
+.fa-fire,
+.fa-burn {
+  color: ghostwhite;
+  font-size: 35px;
+}
+.fa-gripfire,
+.fa-free-code-camp {
+  color: rgb(253, 0, 0);
+  font-size: 35px;
+}
+
+.fa-fire-alt {
+  font-size: 50px;
+  display: block;
+}
+
+.fa-gripfire,
+.fa-free-code-camp,
+.fa-fire,
+.fa-burn {
+  padding: 0 50px;
+  text-align: center;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+/*#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  
+}
+*/
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+  text-align: center;
+}
+
+/*content over the gif*/
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+}
