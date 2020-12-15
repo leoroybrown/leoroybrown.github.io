@@ -38,18 +38,7 @@ Useful for copying and pasting into your HTML (Webfont with CSS or SVG with JS).
   </div>
     </div>
  
-  <!-- The video -->
-<video autoplay muted loop id="myVideo">
-  <source src="Pexels Videos 1535674.mp4" type="video/mp4">
-</video>
-
-<!-- Optional: some overlay text to describe the video -->
-<div class="content">
-  <h1>Heading</h1>
-  <p>Lorem ipsum...</p>
-  <!-- Use a button to pause/play the video with JavaScript -->
-  <button id="myBtn" onclick="myFunction()">Pause</button>
-</div> 
+ 
 
     <!--[if lt IE 7]>
       <p class="browsehappy">
@@ -127,35 +116,6 @@ h1 {
   text-align: center;
 }
 
-*/
-/* Add some content at the bottom of the video/page */
-.content {
-  position: fixed;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Style the button used to pause/play the video */
-#myBtn {
-  width: 200px;
-  font-size: 18px;
-  padding: 10px;
-  border: none;
-  background: #000;
-  color: #fff;
-  cursor: pointer;
-  text-align: center;
-}
-
-#myBtn:hover {
-  background: #ddd;
-  color: black;
-  text-align: center;
-}
 
 /*content over the gif*/
 .container {
@@ -175,24 +135,7 @@ h1 {
 }
     </style>
     
-    <script async defer>
-      // Get the video
-var video = document.getElementById("myVideo");
-
-// Get the button
-var btn = document.getElementById("myBtn");
-
-// Pause and play the video, and change the button text
-function myFunction() {
-  if (video.paused) {
-    video.play();
-    btn.innerHTML = "Pause";
-  } else {
-    video.pause();
-    btn.innerHTML = "Play";
-  }
-}
-    </script>
+ 
     <script
       src="https://kit.fontawesome.com/f115a39765.js"
       crossorigin="anonymous"
