@@ -58,177 +58,149 @@ Useful for copying and pasting into your HTML (Webfont with CSS or SVG with JS).
       </p>
     <![endif]-->
     
-    <script src="aps.js" async defer></script>
+        <script>// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}</script>
     <script
       src="https://kit.fontawesome.com/f115a39765.js"
       crossorigin="anonymous"
     ></script>
-  <style>
-  body,
+      <style>
+      body,
 html {
   height: 100%;
-  padding: 0;
-  margin: 0;
-}
-h1 {
-  margin: 0;
-  padding: 0;
-  color: orangered;
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bg.middle {
-  margin: 0;
 }
 
-.bg {
-  /* The image used */
-  background-image: url("creepy-1867707_1920.jpg");
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("fire-dancing-1174205.jpg");
 
-  /* Full height */
-  height: 100%;
+  /* Set a specific height */
+  height: 50%;
 
-  /* Center and scale the image nicely */
+  /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
-/* Set height of body and the document to 100% to enable "full page tabs" */
-body,
-html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: ghostwhite;
+}
+h1 {
+  color: rgb(253, 0, 0);
 }
 
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
+/*icons*/
+.fire {
+  background-color: transparent;
   border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
 }
 
-.tablink:hover {
-  background-color: #777;
+.fa-fire-alt {
+  color: rgb(253, 0, 0);
 }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
+.fa-fire,
+.fa-burn {
+  color: ghostwhite;
+  font-size: 35px;
+}
+.fa-gripfire,
+.fa-free-code-camp {
+  color: rgb(253, 0, 0);
+  font-size: 35px;
 }
 
-#Home {
-  background-color: red;
-}
-#News {
-  background-color: green;
-}
-#Contact {
-  background-color: blue;
-}
-#About {
-  background-color: orange;
-}
-
-/* search menu*/
-/* Style the search box */
-#mySearch {
-  width: 100%;
-  font-size: 18px;
-  padding: 11px;
-  border: 1px solid #ddd;
-}
-
-/* Style the navigation menu */
-#myMenu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Style the navigation links */
-#myMenu li a {
-  padding: 12px;
-  text-decoration: none;
-  color: black;
+.fa-fire-alt {
+  font-size: 50px;
   display: block;
 }
 
-#myMenu li a:hover {
-  background-color: #eee;
+.fa-gripfire,
+.fa-free-code-camp,
+.fa-fire,
+.fa-burn {
+  padding: 0 50px;
+  text-align: center;
 }
 
-/* Full page overlay menu*/
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0, 0, 0); /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+/* Style the video: 100% width and height to cover the entire window */
+/*#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0; 
+  min-width: 100%;
+  min-height: 100%;
+  
 }
-
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover,
-.overlay a:focus {
+*/
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
 }
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+  text-align: center;
+}
+
+/*content over the gif*/
+.container {
+  position: relative;
+  max-width: 800px; /* Maximum width */
+  margin: 0 auto; /* Center it */
+}
+
+.container .content {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
 }
     </style>
 
