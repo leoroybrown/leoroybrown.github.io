@@ -1,0 +1,488 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(#000000, #5a4a50);
+}
+
+.navigation {
+  height: 100%;
+  position: fixed;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 165px;
+}
+
+/* The sidebar menu */
+.sidenav {
+  height: 90%;
+  width: 100px; /* Set the width of the sidebar */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #33455d; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  display: flex;
+  /*alings all icons in the x axis in center*/
+  align-items: center;
+  /*alings all icons in the y axis in center*/
+  justify-content: center;
+  /*puts the icons on top of eachoter*/
+  flex-direction: column;
+  /*gives a rounded edge*/
+  border: 2px solid #33455d;
+  border-radius: 8px;
+}
+
+.sidenav i {
+  color: #33455d;
+}
+
+/* The navigation menu links */
+.sidenav .tablink {
+  text-decoration: none;
+  font-size: 30px;
+  color: pink;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav .tablink:hover {
+  background-color: #526878;
+  /* probs delete*/
+  filter: brightness(50%);
+}
+
+/*img */
+.main {
+  background-image: url("pexels-gijs-coolen-2948297.jpg");
+  position: fixed;
+  height: 99%;
+  width: 600px;
+  /* gives the edges a transiton effect*/
+  /*
+  box-shadow: 0 0 5px 10px #555;
+  */
+  filter: drop-shadow(0 0 0.9rem rgb(51, 50, 50));
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 265px;
+  /* Same as the width of the sidebar */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+/* * need to figure out how to move the bg img 
+.pic {
+  height: 100%;
+  width: 600px;
+  margin-left: 100px;
+} */
+.profile {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1,
+h3,
+p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.social {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.social a {
+  width: 20%;
+  height: 100%;
+  text-decoration: none;
+  font-size: 30px;
+  color: #818181;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social i {
+  color: mediumaquamarine;
+}
+
+.meat {
+  margin-left: 865px;
+  /* * not doing what i want
+  margin-right: 265px;
+  */
+  height: 100%;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  position: fixed;
+}
+
+/**
+ * Tabs
+ */
+/* Style tab links */
+.tablink {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  background-color: ghostwhite;
+}
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: ghostwhite;
+  height: 90%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*gives a rounded edge*/
+  border: 2px solid linear-gradient(#000000, #5a4a50);
+  border-radius: 8px;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px ghostwhite;
+}
+#Home {
+  background-color: #2d3036;
+  /*! Firefox */
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  scrollbar-color: rgb(146, 132, 132) #2d3036;
+}
+
+#News {
+  background-color: rgb(120, 146, 120);
+}
+
+#Contact {
+  background-color: rgb(35, 35, 75);
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  scrollbar-color: rgb(146, 132, 132) rgb(35, 35, 75);
+}
+
+#About {
+  background-color: rgb(29, 32, 34);
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  scrollbar-color: rgb(146, 132, 132) rgb(29, 32, 34);
+}
+
+.Home,
+.News,
+.Contact,
+.About {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.line {
+  height: 1px;
+  width: 100%;
+  margin-top: 100px;
+  border: solid white;
+  background-color: white;
+}
+.resume {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.webdev i {
+  font-size: 50px;
+  color: teal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: ghostwhite;
+}
+
+.small-title {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  color: ghostwhite;
+  margin-bottom: 80px;
+}
+
+.basic-info {
+  color: rgb(23, 146, 126);
+}
+
+.par {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: ghostwhite;
+  margin: 0;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.shit {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.tb {
+  height: 1px;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: solid white;
+  background-color: white;
+}
+.rats {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.boo,
+.rate,
+.premium {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 33.33%;
+}
+
+.services {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.money {
+  font-size: 50px;
+  color: #85bb65;
+}
+
+.websites,
+.web-apps,
+.frontend,
+.back-end {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 50%;
+  height: 50%;
+}
+.websites i,
+.web-apps i,
+.frontend i,
+.back-end i {
+  font-size: 60px;
+}
+.websites i {
+  color: #f16529;
+}
+.web-apps i {
+  color: #61dafb;
+}
+.frontend i {
+  color: #264de4;
+}
+
+.back-end i {
+  color: #689f63;
+}
+
+.contact,
+.work-ex,
+.coming-soon,
+.frontpage {
+  height: 90%;
+  width: 90%;
+}
+.frontpage {
+  border-top: 0px 0px 40px 40px #000000;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.phone {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+/* 
+/* The hero image 
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read 
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
+
+  /* Set a specific height 
+  height: 100%;
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image 
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+} */
+
+.bgimg {
+  /* Background image */
+  background-image: url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
+  /* Full-screen */
+  height: 100%;
+  width: 100%;
+  /* Center the background image */
+  background-position: center;
+  /* Scale and zoom in the image */
+  background-size: cover;
+  /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
+  position: relative;
+  /* Add a white text color to all elements inside the .bgimg container */
+  color: ghostwhite;
+  /* Add a font */
+  font-family: "Courier New", Courier, monospace;
+  /* Set the font-size to 25 pixels */
+  font-size: 25px;
+}
+
+/* Position text in the bottom-left corner */
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
+
+/* Position text in the middle */
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the <hr> element */
+hr {
+  margin: auto;
+  width: 40%;
+}
