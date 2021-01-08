@@ -3,37 +3,75 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100%;
 }
+
+/* Small screens */
 @media all and (max-width: 600px) {
   html,
   body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+  }
+  .layout {
+    height: 100%;
+  }
+  .all-content {
+    height: 100%;
+    background-color: black;
+  }
+  .profile {
     background-color: black;
   }
   .navigation {
     height: 50px;
   }
+  .col-one {
+    width: 100%;
+    background-color: ghostwhite;
+  }
   .sidenav {
     height: 100%;
-    width: 100%; 
+    width: 100%; /* Set the width of the sidebar */
     position: sticky;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Disable horizontal scroll */
     display: flex;
+    /*alings all icons in the x axis in center*/
     align-items: center;
+    /*alings all icons in the y axis in center*/
     justify-content: center;
+    /*puts the icons on top of eachoter*/
     flex-direction: row;
+    /*gives a rounded edge*/
   }
-  .sidenav .tablink {
+
+  .tablink {
     text-decoration: none;
     font-size: 20px;
     width: 100%;
-    height: 50px;
+    height: 100%;
+    background-color: ghostwhite;
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+  }
+
+  .pic {
+    display: none;
+  }
+  .pages {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
+    margin: 0;
   }
-  .main {
-    display: none;
-  }
+
   .meat {
     height: 100%;
     width: 100%;
@@ -51,10 +89,23 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  #Home,
+  .News,
+  .Contact,
+  .About,
+  .Fun {
+    overflow: hidden; /* Hide scrollbars */
+  }
+  .myFunction {
+    display: none;
   }
   h2.my-name {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
     color: ghostwhite;
@@ -96,15 +147,19 @@ body {
     justify-content: center;
     flex-direction: row;
   }
+
   .bgimg {
     background-image: url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
     height: 100%;
     width: 100%;
+    /* Center the background image */
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Scale and zoom in the image */
     background-size: cover;
+    /*should be display scrool but not working*/
     overflow-x: hidden;
     overflow-y: hidden;
     color: ghostwhite;
@@ -117,77 +172,88 @@ body {
     color: #689f63;
   }
 }
+
 .sidenav i {
   color: #33455d;
 }
-.tablink {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  background-color: ghostwhite;
-}
-.tablink:hover {
-  background-color: #777;
-}
+
 ::-webkit-scrollbar {
   width: 12px;
 }
+
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px ghostwhite;
 }
 #Home {
   background-color: #2d3036;
-  /*! Firefox */
   scrollbar-width: thin;
   overflow-y: scroll;
   scrollbar-color: rgb(146, 132, 132) #2d3036;
 }
+
 #News {
   background-color: rgb(120, 146, 120);
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  scrollbar-color: rgb(146, 132, 132) rgb(120, 146, 120);
 }
+
 #Contact {
   background-color: rgb(35, 35, 75);
   scrollbar-width: thin;
   overflow-y: scroll;
   scrollbar-color: rgb(146, 132, 132) rgb(35, 35, 75);
 }
+
 #About {
   background-color: rgb(29, 32, 34);
   scrollbar-width: thin;
   overflow-y: scroll;
   scrollbar-color: rgb(146, 132, 132) rgb(29, 32, 34);
 }
+#Fun {
+  background-color: rgb(29, 32, 34);
+  scrollbar-width: thin;
+  overflow-y: scroll;
+  scrollbar-color: rgb(146, 132, 132) rgb(29, 32, 34);
+}
+
 .Home,
 .News,
 .Contact,
-.About {
+.About,
+.Fun {
   display: flex;
   height: 100%;
   width: 100%;
+  /*! Firefox */
+  scrollbar-width: thin;
+  overflow-y: scroll;
 }
 .contact,
-.work-ex,
 .coming-soon,
 .frontpage {
   height: 90%;
   width: 90%;
 }
+
 h1,
 h3,
 p {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 a {
   text-decoration: none;
   color: ghostwhite;
 }
+
 .websites i {
   color: #f16529;
 }
@@ -197,39 +263,92 @@ a {
 .frontend i {
   color: #264de4;
 }
+
 .back-end i {
   color: #689f63;
 }
 .basic-info {
   color: rgb(23, 146, 126);
 }
-@media only screen and (min-width: 600px) {
+
+.social i {
+  color: mediumaquamarine;
+}
+.contact-icons i {
+  color: red;
+  font-size: 30px;
+}
+@media all and (max-width: 800px) {
   html,
   body {
-    background-image: linear-gradient(#000000, #5a4a50);
+    font-size: 12px;
   }
-  .navigation {
+  /* not working for some reason */
+  .websites i,
+  .web-apps i,
+  .frontend i,
+  .back-end i {
+    font-size: 20px;
+  }
+  .boo,
+  .rate,
+  .premium h3 {
+    font-size: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .all-content {
+    height: 99%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .layout {
+    height: 95%;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 8% 5% 34% 45% 8%;
+  }
+
+  /* refrence */
+  .layout > div {
     height: 100%;
-    position: fixed;
-    width: 50px;
+    width: 100%;
+  }
+  .col-one {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: ;
+    width: 100%;
   }
+
   .sidenav {
     height: 90%;
-    width: 50px; 
+    width: 100%;
     background-color: #33455d;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    /*puts the icons on top of eachoter*/
     flex-direction: column;
+    /*gives a rounded edge*/
     border: 2px solid #33455d;
     border-radius: 8px;
+    position: relative;
   }
-  .sidenav .tablink {
+
+  /* The navigation menu links */
+  .tablink {
     text-decoration: none;
     font-size: 30px;
     width: 100%;
@@ -237,33 +356,51 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    border: none;
+
+    outline: none;
+    margin: 0;
+    padding: 0;
   }
-  .sidenav .tablink:hover {
+  button.tablink {
+    background-color: ghostwhite;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border: none;
+  }
+
+  .tablink:hover {
     background-color: #526878;
     filter: brightness(50%);
   }
-  .main {
+  .pic {
     background-image: url("pexels-gijs-coolen-2948297.jpg");
-    position: fixed;
     height: 99%;
-    width: 300px;
+    width: 100%;
     filter: drop-shadow(0 0 0.9rem rgb(51, 50, 50));
+    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 50px;
+    /* Same as the width of the sidebar */
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    position: relative;
+    border: 2px;
+    border-radius: 8px;
   }
   .profile {
     height: 50%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
   }
+
   p {
     padding-left: 5px;
     padding-right: 5px;
@@ -276,6 +413,7 @@ a {
     align-items: center;
     justify-content: center;
   }
+
   .social a {
     width: 20%;
     height: 100%;
@@ -286,23 +424,28 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .social i {
-    color: mediumaquamarine;
-  }
-  .meat {
-    margin-left: 350px;
+
+  .pages {
     height: 100%;
-    width: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .meat {
+    height: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    position: fixed;
   }
+
   .tabcontent {
     color: ghostwhite;
-    height: 90%;
-    width: 80%;
+    height: 85%;
+    width: 44.5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -311,14 +454,15 @@ a {
     border-radius: 8px;
     flex-direction: column;
     overflow-x: hidden;
+    position: fixed;
   }
+
   .info {
     width: 100%;
     height: auto;
-    margin-bottom: 100px;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
   .line {
@@ -328,6 +472,65 @@ a {
     border: solid white;
     background-color: white;
   }
+
+  .work-titles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 30%;
+    width: 90%;
+  }
+
+  .contact-icons {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color: red;
+    align-items: center;
+  }
+
+  .contact-icons a {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact-icons i {
+    padding-right: 10px;
+  }
+
+  .work-ex {
+    height: 100%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+    text-align: start;
+  }
+
+  .education {
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+  }
+  .work-rows {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .year-color,
+  .fa-university,
+  .fa-toolbox {
+    color: rgb(185, 65, 17);
+  }
+  .fa-university,
+  .fa-toolbox {
+    padding-right: 15px;
+  }
   .resume {
     width: 100%;
     height: auto;
@@ -336,6 +539,7 @@ a {
     justify-content: space-between;
     flex-direction: column;
   }
+
   .webdev i {
     font-size: 50px;
     color: teal;
@@ -343,6 +547,7 @@ a {
     align-items: center;
     justify-content: space-between;
   }
+
   .title {
     width: 100%;
     display: flex;
@@ -353,6 +558,7 @@ a {
   .my-name {
     display: none;
   }
+
   .small-title {
     width: 100%;
     display: flex;
@@ -363,7 +569,7 @@ a {
   }
 
   .par {
-    height: 100%;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -379,7 +585,7 @@ a {
 
   .shit {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
@@ -395,7 +601,7 @@ a {
   }
   .rats {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -409,17 +615,20 @@ a {
     flex-direction: column;
     width: 33.33%;
   }
-  .services {
+
+  .services,
+  .edu {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
   .money {
-    font-size: 20px;
+    font-size: 60px;
     color: #85bb65;
   }
+
   .websites,
   .web-apps,
   .frontend,
@@ -429,7 +638,7 @@ a {
     align-items: flex-start;
     flex-direction: column;
     width: 50%;
-    height: 50%;
+    height: auto;
   }
   .websites i,
   .web-apps i,
@@ -437,18 +646,22 @@ a {
   .back-end i {
     font-size: 60px;
   }
+
+  /* Style inputs with type="text", select elements and textareas */
   input[type="text"],
   select,
   textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical; 
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
   }
+
+  /* Style the submit button with a specific background color etc */
   input[type="submit"] {
     background-color: #4caf50;
     color: white;
@@ -457,37 +670,63 @@ a {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  /* When moving the mouse over the submit button, add a darker green color */
   input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: rgb(153, 153, 161);
   }
+
+  /* Add a background color and some padding around the form */
   .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
   }
+
   .phone {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
   }
+
+  .u-school {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+    font-size: 12px;
+  }
+
   .bgimg {
+    /* Background image */
     background-image: url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
+    /* Full-screen */
     height: 100%;
     width: 100%;
+    /* Center the background image */
     background-position: center;
+    /* Scale and zoom in the image */
     background-size: cover;
+    /* Add position: relative to enable absolutely positioned elements inside the image (place text) */
     position: relative;
+    /* Add a white text color to all elements inside the .bgimg container */
     color: ghostwhite;
     /* Add a font */
     font-family: "Courier New", Courier, monospace;
+    /* Set the font-size to 25 pixels */
     font-size: 25px;
   }
+
+  /* Position text in the bottom-left corner */
   .bottomleft {
     position: absolute;
     bottom: 0;
     left: 16px;
   }
+
+  /* Position text in the middle */
   .middle {
     position: absolute;
     top: 50%;
@@ -495,601 +734,155 @@ a {
     transform: translate(-50%, -50%);
     text-align: center;
   }
+
+  /* Style the <hr> element */
   hr {
     margin: auto;
     width: 40%;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    height: 100%;
+  }
+
+  .grid-container > div {
+    cursor: pointer;
+    height: 210px;
+    /*fill the entire box*/
+    background-size: cover;
+    /*wiht the span, spans the entire box ones*/
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    transition: all 0.5s ease-in;
+  }
+
+  .grid-container > div:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+
+  /* divs dont have a class so we call it by using :nth-of-type(and then the div we want in order 1,2,3,4...ect)*/
+  .grid-container > div:nth-of-type(1) {
+    /*this will span how many we want (1 which div we want)/(3 how many columns)1/3, three columns 1/4 four columns, ect...*/
+    grid-column: 1/5;
+  }
+
+  /* .grid-container > div:nth-of-type(6) {
+  grid-column: ;
+} */
+
+  /* .grid-container > div:nth-of-type(9) {
+  grid-column: 3/5;
+}
+
+.grid-container > div:nth-of-type(10) {
+  grid-column: 1/3;
+} */
+
+  .bg1 {
+    /*Img used for all the bg1 boxes*/
+    background: url("https://images.pexels.com/photos/3302434/pexels-photo-3302434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    color: red;
+  }
+
+  .bg2 {
+    background: url("https://images.pexels.com/photos/3817912/pexels-photo-3817912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
+    color: #f1e172;
+  }
+
+  .popups {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    width: 90%;
   }
 }
-@media only screen and (min-width: 992px) {
-  html,
-  body {
-    background-image: linear-gradient(#000000, #5a4a50);
-  }
-  .navigation {
-    height: 100%;
-    position: fixed;
-    width: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 20px;
-  }
-  .sidenav {
-    height: 90%;
-    width: 80px; 
-    background-color: #33455d;
-    overflow-x: hidden; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid #33455d;
-    border-radius: 8px;
-  }
-  .sidenav .tablink {
-    text-decoration: none;
-    font-size: 30px;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sidenav .tablink:hover {
-    background-color: #526878;
-    filter: brightness(50%);
-  }
-  .main {
-    background-image: url("pexels-gijs-coolen-2948297.jpg");
-    position: fixed;
-    height: 99%;
-    width: 420px;
-    filter: drop-shadow(0 0 0.9rem rgb(51, 50, 50));
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 80px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .profile {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  p {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .social {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-  .social a {
-    width: 20%;
-    height: 100%;
-    text-decoration: none;
-    font-size: 30px;
-    color: #818181;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .social i {
-    color: mediumaquamarine;
-  }
-  .meat {
-    margin-left: 500px;
-    height: 100%;
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    position: fixed;
-  }
-  .tabcontent {
-    color: ghostwhite;
-    height: 90%;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*gives a rounded edge*/
-    border: 2px solid linear-gradient(#000000, #5a4a50);
-    border-radius: 8px;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  .info {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
-  .line {
-    height: 1px;
-    width: 100%;
-    margin-top: 100px;
-    border: solid white;
-    background-color: white;
-  }
-  .resume {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .webdev i {
-    font-size: 50px;
-    color: teal;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .title {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    color: ghostwhite;
-  }
-  .my-name {
-    display: none;
-  }
-  .small-title {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    color: ghostwhite;
-    margin-bottom: 80px;
-  }
-  .par {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: ghostwhite;
-    margin: 0;
-  }
-  h1 {
-    font-size: 50px;
-    font-family: "Lato", sans-serif;
-  }
-  .shit {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .tb {
-    height: 1px;
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: solid white;
-    background-color: white;
-  }
-  .rats {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .boo,
-  .rate,
-  .premium {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 33.33%;
-  }
-  .services {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+
+@media (max-width: 1250px) {
   .money {
-    font-size: 40px;
+    font-size: 30px;
     color: #85bb65;
   }
-  .websites,
-  .web-apps,
-  .frontend,
-  .back-end {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 50%;
-    height: 50%;
-  }
-  .websites i,
-  .web-apps i,
-  .frontend i,
-  .back-end i {
-    font-size: 60px;
-  }
-  input[type="text"],
-  select,
-  textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
-    resize: vertical; 
-  }
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-  .phone {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .bgimg {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: ghostwhite;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 25px;
-  }
-  .bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-  }
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  hr {
-    margin: auto;
-    width: 40%;
+  .boo h3,
+  .rate h3,
+  .premium h3 {
+    font-size: 20px;
   }
 }
-@media only screen and (min-width: 1550px) {
-  html,
-  body {
-    background-image: linear-gradient(#000000, #5a4a50);
-  }
-  .navigation {
-    height: 100%;
-    position: fixed;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 165px;
-  }
 
-  .sidenav {
-    height: 90%;
-    width: 100px; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
-    background-color: #33455d;
-    overflow-x: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    border: 2px solid #33455d;
-    border-radius: 8px;
-  }
-  .sidenav .tablink {
-    text-decoration: none;
-    font-size: 30px;
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sidenav .tablink:hover {
-    background-color: #526878;
-    filter: brightness(50%);
-  }
-  .main {
-    background-image: url("pexels-gijs-coolen-2948297.jpg");
-    position: fixed;
-    height: 99%;
-    width: 600px;
-    filter: drop-shadow(0 0 0.9rem rgb(51, 50, 50));
-    
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: 265px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-  }
-  .profile {
-    height: 50%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+/* Style inputs, select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid ghostwhite;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
 
-  p {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .social {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
 
-  .social a {
-    width: 20%;
-    height: 100%;
-    text-decoration: none;
-    font-size: 30px;
-    color: #818181;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .social i {
-    color: mediumaquamarine;
-  }
-  .meat {
-    margin-left: 865px;
-    height: 100%;
-    width: 55%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    position: fixed;
-  }
-  .tabcontent {
-    color: ghostwhite;
-    height: 90%;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid linear-gradient(#000000, #5a4a50);
-    border-radius: 8px;
-    flex-direction: column;
-    overflow-x: hidden;
-  }
-  .info {
-    width: 100%;
-    height: auto;
-    margin-bottom: 100px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    flex-direction: column;
-  }
-  .line {
-    height: 1px;
-    width: 100%;
-    margin-top: 100px;
-    border: solid white;
-    background-color: white;
-  }
-  .resume {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .webdev i {
-    font-size: 50px;
-    color: teal;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .title {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    color: ghostwhite;
-  }
-  .my-name {
-    display: none;
-  }
-  .small-title {
-    width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    color: ghostwhite;
-    margin-bottom: 80px;
-  }
-  .par {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: ghostwhite;
-    margin: 0;
-  }
-  h1 {
-    font-size: 50px;
-    font-family: "Lato", sans-serif;
-  }
-  .shit {
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  .tb {
-    height: 1px;
-    width: 100%;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: solid white;
-    background-color: white;
-  }
-  .rats {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .boo,
-  .rate,
-  .premium {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    width: 33.33%;
-  }
-  .services {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .money {
-    font-size: 60px;
-    color: #85bb65;
-  }
+/* Style the submit button */
+input[type="submit"] {
+  background-color: ghostwhite;
+  color: #23234b;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
 
-  .websites,
-  .web-apps,
-  .frontend,
-  .back-end {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    width: 50%;
-    height: 50%;
-  }
-  .websites i,
-  .web-apps i,
-  .frontend i,
-  .back-end i {
-    font-size: 60px;
-  }
-  input[type="text"],
-  select,
-  textarea {
-    width: 100%; 
-    padding: 12px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px;
-    resize: vertical; 
-  }
+/* Style the container */
+.container {
+  border-radius: 5px;
+  background-color: #23234b;
+  padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
   input[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-  }
-  .phone {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .bgimg {
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/19/14/30/aurora-borealis-1839582_1280.jpg");
-    height: 100%;
     width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    color: ghostwhite;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 25px;
-  }
-  .bottomleft {
-    position: absolute;
-    bottom: 0;
-    left: 16px;
-  }
-  .middle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  hr {
-    margin: auto;
-    width: 40%;
+    margin-top: 0;
   }
 }
