@@ -1,3 +1,7 @@
+function myFunction(color) {
+  document.body.style.backgroundImage = color;
+}
+
 function openPage(pageName, elmnt, color) {
   // Hide all elements with class="tabcontent" by default */
   var i, tabcontent, tablinks;
@@ -22,8 +26,8 @@ function openPage(pageName, elmnt, color) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
-// Set the date we're counting down to
-var countDownDate = new Date("dec 30, 2020 15:37:25").getTime();
+// Set the date counting down to
+var countDownDate = new Date("jan 11, 2021 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
