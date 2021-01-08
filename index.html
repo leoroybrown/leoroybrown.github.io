@@ -10,48 +10,86 @@
     <title>Leo Myers</title>
     <link
       rel="icon"
-      href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fdownload_311846.png&f=1&nofb=1"
+      href="favicon.png"
       type="image/icon type"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="navigation">
-      <!-- Side navigation -->
-      <div class="sidenav">
-        <button class="tablink" onclick="openPage('Home', this, '#2d3036')" id="defaultOpen">
-          <i class="far fa-user"></i>
-        </button>
-        <button class="tablink" onclick="openPage('Contact', this, ' rgb(35, 35, 75)')" >
-          <i class="far fa-comment-alt"></i>
-        </button>
-        <button class="tablink" onclick="openPage('About', this, 'rgb(29, 32, 34)')" >
-          <i class="far fa-file"></i>
-        </button>
+    <div class="all-content">
+      <div class="layout">
+        <div></div>
+        <div class="col-one">
+            <div class="sidenav">
+              <!-- <a href="chart.html">test</a> -->
+              <button
+                class="tablink" 
+                onclick="openPage('Home', this, '#2d3036'),myFunction('linear-gradient(#000000, #5a4a50)')"
+                id="defaultOpen"
+              >
+                <i class="far fa-user"></i>
+              </button>
+              <button
+                class="tablink"
+                onclick="openPage('Contact', this, ' rgb(35, 35, 75)'),myFunction('linear-gradient(135deg, #4b384c 15%, #da5de2 100%)')"
+              >
+                <i class="far fa-comment-alt"></i>
+              </button>
+              <button
+                class="tablink"
+                onclick="openPage('About', this, 'rgb(29, 32, 34)'),myFunction('linear-gradient(135deg, #632c65 15%, #56a5e2 100%)')"
+                
+              >
+                <i class="far fa-file"></i>
+              </button>
 
-        <button class="tablink" onclick="openPage('News', this, '#528cad')">
-          <a href="#"> <i class="fas fa-laptop-code"></i></a>
-        </button>
-      </div>
-    </div>
+              <button
+                class="tablink"
+                onclick="openPage('News', this, '#011c3e'),myFunction('linear-gradient(135deg, #e2a9e5 15%, #2b94e5 100%)')"
+              >
+                <a href="#"> <i class="fas fa-laptop-code"></i></a>
+              </button>
+              <!-- <button
+                class="tablink"
+                onclick="openPage('Fun', this, '#528cad'),myFunction('linear-gradient(135deg, #360707 15%, #65babd 100%)')"
+              >
+                <a href="#"><i class="fab fa-linux"></i></a>
+              </button> -->
+            </div>
+          
+        </div>
 
-    <!-- pic content -->
-    <div class="pic">
-      <div class="main">
+        <!-- pic content -->
+       <div class="pic">
         <div class="profile">
           <h1>Leo Myers</h1>
           <h3>Deovolper</h3>
           <div class="social">
-            <a href=""><i class="fab fa-linkedin"></i></a>
-            <a href=""><i class="far fa-envelope"></i></a>
-            <a href=""><i class="fab fa-dribbble"></i></a>
+            <a href="https://www.linkedin.com/in/leo-myers-282a76201/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:leroybrown@protonmail.com" target="_blank"><i class="far fa-envelope"></i></a>
+            <a href="https://github.com/leoroybrown" target="_blank"><i class="fab fa-github-square"></i></a>
+            <a href="https://codepen.io/leoroybrown" target="_blank"><i class="fab fa-codepen"></i></a>
           </div>
         </div>
-      </div>
     </div>
-
+<div class="pages">
     <div class="meat">
       
       <div id="Home" class="tabcontent">
@@ -119,8 +157,8 @@
             <div class="boo">
               <h3>basic</h3>
               <h4><span class="money">$10</span>/hour</h4>
-              <h4><span>$100</span>for</h4>
-              <h4>Landing Page</h4>
+              <!-- <h4><span>$100</span>for</h4> -->
+       <h4>Landing Page</h4>
               <h4>Basic Website</h4>
               <h4>ect</h4>
               
@@ -146,36 +184,63 @@
           
         </div>
         <div class="phone">
-        <h3><a href="tel:8018332803">Call us at (801) 833-2803</a></h3>
-        <h3><a href="https://www.linkedin.com/in/leo-myers-282a76201/">Visit my Linkedin</a></h3>
-        <h3> <a href = "mailto: leroybrown@protonmail.com">Send Me An Email</a></h3>
+          <div class="contact-icons">
+            
+        <h3><a href="tel:8018332803"><i class="fas fa-phone-square-alt"></i>Give me a call or text at (801) 833-2803</a></h3>
+      </div>
+      <div class="contact-icons">
+        <h3><a href="https://www.linkedin.com/in/leo-myers-282a76201/" target="_blank"><i class="fab fa-linkedin contact-icon"></i>Visit my Linkedin</a></h3>
+        </div>
+        <div class="contact-icons">
+        <h3><a href = "mailto:leroybrown@protonmail.com"><i class="fas fa-envelope"></i>Send Me An Email</a></h3>
+        </div>
         </div>
         
-        <div class="contact-form">
-           <div class="container">
+        
+            <div class="container">
   <form action="action_page.php">
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-    <input type="submit" value="Submit">
-
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
   </form>
 </div> 
-        </div>
+        
         </div>
       </div>
       
@@ -195,29 +260,62 @@
       
 
       <div id="About" class="tabcontent">
+        <div class="contact">
+          <h1 class="title">Resume</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex quo laborum voluptates quaerat omnis quisquam ratione eius iste facere corrupti! Dolor corrupti esse deserunt error aspernatur itaque ab! Quam, mollitia.</p>
+         
+          <div class="line"></div>
         <div class="work-ex">
-        <div class="title">
-          <h1>Enter Resume here</h1>
-        </div>
-        <div class="info">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo
-            praesentium, neque aliquid aut totam, recusandae cupiditate ipsam,
-            illum mollitia quidem culpa magnam? Voluptatum quas voluptas debitis
-            quisquam ea porro molestias!
-          </p>
+          <div class="education">
+            <div class="work-rows">
+              <div class="u-school">
+                <h2><i class="fas fa-university"></i>Education</h2>
+            <h3>Salt lake comunity colleg</h3>
+            <h3 class="year-color">2012-present</h3>
+            <h4>Business</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim ipsa et, corporis harum, nulla in sit quo illum explicabo blanditiis magnam! Voluptates numquam, provident amet reprehenderit illum iste minima!</p>
+            <h3>Salt lake comunity colleg</h3>
+            <h3 class="year-color">2012-present</h3>
+            <h4>Business</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim ipsa et, corporis harum, nulla in sit quo illum explicabo blanditiis magnam! Voluptates numquam, provident amet reprehenderit illum iste minima!</p>
+          </div>
+            </div>
+            
+          </div>
+        <div class="education">
+            <div class="work-rows">
+              <div class="u-school">
+                <h2><i class="fas fa-toolbox"></i>Work</h2>
+            <h3>Home Depot</h3>
+            <h4 class="year-color">2012-present</h4>
+            <h4>Business</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim ipsa et, corporis harum, nulla in sit quo illum explicabo blanditiis magnam! Voluptates numquam, provident amet reprehenderit illum iste minima!</p>
+            <h2>Aerothech avaiton</h2>
+            <h3 class="year-color">2012-present</h3>
+            <h4>Business</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error enim ipsa et, corporis harum, nulla in sit quo illum explicabo blanditiis magnam! Voluptates numquam, provident amet reprehenderit illum iste minima!</p>
+          </div>
+            </div>
+          </div>
+
         </div>
         </div>
       </div>
+      
+      <div id="Fun" class="tabcontent">
+        
+      </div>
     </div>
-
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-
+  </div> 
+        <!--[if lt IE 7]>
+          <p class="browsehappy">
+            You are using an <strong>outdated</strong> browser. Please
+            <a href="#">upgrade your browser</a> to improve your experience.
+          </p>
+        <![endif]-->
+        <div></div>
+      </div>
+    </div>
     <script src="aps.js" async defer></script>
     <script
       src="https://kit.fontawesome.com/f115a39765.js"
